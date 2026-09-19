@@ -46,6 +46,7 @@ mod combined;
 mod core;
 mod error;
 mod lang;
+mod properties;
 mod scripts;
 mod trigrams;
 mod utils;

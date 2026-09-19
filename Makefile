@@ -10,3 +10,6 @@ test:
 	cargo test --all-features
 test-fuzz:
 	ARBTEST_BUDGET_MS=6000000 cargo test --all-features --release
+
+test-mutate:
+	./scripts/mutate_check.sh
