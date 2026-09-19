@@ -49,8 +49,14 @@ impl Detector {
         Self::with_options(opts)
     }
 
-    fn with_options(options: Options) -> Self {
+    pub fn with_options(options: Options) -> Self {
         Detector { options }
+    }
+
+    /// Set the detection [`crate::Method`] for this detector.
+    pub fn set_method(mut self, method: crate::Method) -> Self {
+        self.options = self.options.set_method(method);
+        self
     }
 
     pub fn detect(&self, text: &str) -> Option<Info> {

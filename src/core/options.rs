@@ -20,7 +20,6 @@ impl Options {
         Self::new().set_filter_list(filter_list)
     }
 
-    #[cfg(feature = "dev")]
     pub fn with_method(method: Method) -> Self {
         Self::new().set_method(method)
     }
@@ -30,7 +29,6 @@ impl Options {
         self
     }
 
-    #[cfg(feature = "dev")]
     pub fn set_method(mut self, method: Method) -> Self {
         self.method = method;
         self
